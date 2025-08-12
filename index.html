@@ -3,144 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enyxa</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: white;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background-color: #111;
-        }
-
-        header img {
-            height: 40px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 1.1em;
-            position: relative;
-        }
-
-        nav a::after {
-            content: '';
-            display: block;
-            height: 2px;
-            background: white;
-            width: 0;
-            transition: width .3s;
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        section {
-            padding: 60px 40px;
-        }
-
-        h1, h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        /* Matrix grid for work section */
-        .work-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .work-item {
-            background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /* shimmer effect */
-        .work-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -75%;
-            width: 50%;
-            height: 100%;
-            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
-            transform: skewX(-25deg);
-        }
-
-        .work-item:hover::before {
-            animation: shimmer 1.5s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { left: -75%; }
-            100% { left: 125%; }
-        }
-    </style>
+    <title>ENYXA | High-Conversion Copywriting</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <img src="logo.png" alt="Enyxa Logo">
+        <div class="logo-container">
+            <img src="logo.png" alt="Enyxa Logo">
+            <span>ENYXA</span>
+        </div>
         <nav>
-            <a href="#home">Home</a>
-            <a href="#work">Work</a>
+            <a href="index.html">Home</a>
+            <a href="work.html" class="button-nav">See My Work</a>
         </nav>
     </header>
 
-    <section id="home">
-        <h1>Welcome to Enyxa</h1>
-        <p style="text-align:center; max-width:700px; margin:auto;">Your creative solutions partner for copywriting, sales funnels, and high-converting content.</p>
-    </section>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Words that do more than just exist. They convert.</h1>
+                <p class="subtitle">
+                    I build the bridge between your brand and your audience with copy that connects, captivates, and drives action.
+                </p>
+                <div class="klaviyo-form-Ws6kk9"></div>
+            </div>
+            <div class="hero-image-container">
+                <img src="laptop.png" alt="Laptop displaying a project" class="hero-laptop">
+            </div>
+        </section>
 
-    <section id="work">
-        <h2>Work</h2>
-        <div class="work-grid">
-            <div class="work-item">Sales Page (Long Form)</div>
-            <div class="work-item">VSL Script</div>
-            <div class="work-item">Webinar Deck</div>
-            <div class="work-item">Lead Generation Landing Page</div>
-            <div class="work-item">Opt-in Page</div>
-            <div class="work-item">Thank You / Confirmation Page</div>
-            <div class="work-item">Reel Script (&lt;90 Seconds Each)</div>
-            <div class="work-item">Story Sequence (3-5 Slides)</div>
-            <div class="work-item">Social Media Carousel (5-10 Slides)</div>
-            <div class="work-item">Single Email (Copy Only)</div>
-            <div class="work-item">Single Email (Copy + Design)</div>
-            <div class="work-item">Email Nurture Sequence (5-7 Emails, Copy Only)</div>
-            <div class="work-item">Email Nurture Sequence (5-7 Emails, Copy + Design)</div>
-            <div class="work-item">Email Sales Sequence (5-7 Emails)</div>
-            <div class="work-item">Upsell / Order Bump Page</div>
-            <div class="work-item">Info Sales Page</div>
-            <div class="work-item">Ad Copy (Set of 3-5) + Setup</div>
-            <div class="work-item">Membership Site Sales Copy</div>
-            <div class="work-item">Product Launch Email Campaign (Complete)</div>
-            <div class="work-item">Evergreen Funnel Copy (Complete)</div>
-            <div class="work-item">Quiz Funnel Copy</div>
-            <div class="work-item">Case Study / Success Story</div>
-            <div class="work-item">About Page or Bio (Authority-Building)</div>
-            <div class="work-item">Website Copy</div>
-        </div>
-    </section>
+        <section id="why-enyxa">
+            <h2>Your partner in purposeful storytelling.</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Deep-Dive Research</h3>
+                    <p>Every word is intentional. I immerse myself in your brand's voice, your market, and your customer's mindset to write copy that doesn't just speak to them—it resonates on a personal level.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Conversion-Focused Craft</h3>
+                    <p>This isn't just about beautiful sentences. It's about engineering a seamless customer journey that feels effortless and compelling, turning casual browsers into loyal advocates for your brand.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Authentic Connection</h3>
+                    <p>No jargon, no fluff. Just clear, persuasive, and human-centric copy designed to make your brand the only choice. Let's create something they can't ignore.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ENYXA. All rights reserved.</p>
+    </footer>
+
+    <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=YOUR_PUBLIC_API_KEY"></script>
 
 </body>
 </html>

@@ -1,473 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ENYXA Copywriter</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='black'/%3E%3Ctext x='50' y='55' font-size='18' font-family='sans-serif' fill='gold' text-anchor='middle' font-weight='bold'%3EENYXA%3C/text%3E%3Ctext x='50' y='75' font-size='14' font-family='sans-serif' fill='gold' text-anchor='middle'%3EDOT COM%3C/text%3E%3C/svg%3E">
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2X2H04KX2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-Q2X2H04KX2');
-    </script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enyxa</title>
     <style>
-        /* General Styling */
         body {
-            background-color: #0a0a0a;
-            color: #e0e0e0;
-            font-family: 'Cormorant Garamond', 'Times New Roman', serif;
             margin: 0;
-            padding: 0;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            scroll-behavior: smooth;
-        }
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap');
-
-        body.fade-in {
-            opacity: 1;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: white;
         }
 
-        /* Header Styling */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 5%;
-            background-color: rgba(10, 10, 10, 0.8);
-            border-bottom: 1px solid #222;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
+            padding: 20px 40px;
+            background-color: #111;
         }
 
-        header .logo {
-            font-size: 1.5em;
-            font-weight: 700;
-            color: #ffd700;
-            letter-spacing: 1px;
+        header img {
+            height: 40px;
         }
 
-        header nav a {
-            color: #e0e0e0;
+        nav a {
+            color: white;
             text-decoration: none;
-            margin: 0 20px;
+            margin-left: 20px;
             font-size: 1.1em;
-            font-weight: 400;
             position: relative;
-            transition: color 0.4s;
-            cursor: pointer;
         }
 
-        header nav a::after {
+        nav a::after {
             content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
             display: block;
-            margin-top: 5px;
-            right: 0;
-            background: #ffd700;
-            transition: width 0.4s ease;
-        }
-
-        header nav a:hover {
-            color: #ffd700;
-        }
-
-        header nav a:hover::after {
-            width: 100%;
+            height: 2px;
+            background: white;
+            width: 0;
+            transition: width .3s;
+            position: absolute;
+            bottom: -5px;
             left: 0;
-            background-color: #ffd700;
         }
 
-        /* Main Content Styling */
-        main {
-            padding: 0;
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        section {
+            padding: 60px 40px;
+        }
+
+        h1, h2 {
             text-align: center;
-        }
-
-        .page-section {
-            padding: 60px 5%;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        /* Logo Image Styling */
-        .crown-logo {
-            width: 80px;
-            height: auto;
-            margin-bottom: 25px;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
             margin-bottom: 20px;
-            font-weight: 700;
-            line-height: 1.1;
         }
 
-        .hero p {
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            max-width: 700px;
-            margin: 20px auto 30px;
-            color: #aaa;
-        }
-
-        .cta-button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 15px 35px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #ffd700;
-            background-color: transparent;
-            border: 2px solid #ffd700;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: all 0.4s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #ffd700;
-            color: #0a0a0a;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
-        }
-
-        /* Copywriting Description */
-        .copywriting-description {
-            background-color: #121212;
-        }
-
-        .copywriting-description h2,
-        .testimonials h2,
-        #work h2,
-        #about h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 30px;
-            font-weight: 700;
-        }
-
-        .copywriting-description p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-            color: #ccc;
-        }
-
-        /* Work Section */
-        .work-categories {
-            margin-bottom: 50px;
-        }
-
-        .work-categories button {
-            background-color: transparent;
-            color: #e0e0e0;
-            border: 1px solid #ffd700;
-            padding: 12px 25px;
-            margin: 0 10px;
-            cursor: pointer;
-            border-radius: 50px;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1rem;
-            transition: all 0.3s;
-        }
-
-        .work-categories button:hover,
-        .work-categories button.active {
-            background-color: #ffd700;
-            color: #121212;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
-        }
-
-        .work-matrix {
+        /* Matrix grid for work section */
+        .work-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
         }
 
         .work-item {
+            background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
             position: relative;
             overflow: hidden;
-            border-radius: 15px;
-            background-color: #1a1a1a;
-            text-decoration: none;
-            color: #e0e0e0;
+            font-weight: bold;
+            cursor: pointer;
         }
 
-        .work-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .work-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .work-item .overlay {
+        /* shimmer effect */
+        .work-item::before {
+            content: '';
             position: absolute;
             top: 0;
-            left: 0;
-            width: 100%;
+            left: -75%;
+            width: 50%;
             height: 100%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.1) 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: flex-start;
-            padding: 25px;
-            opacity: 1;
-            transition: background 0.5s;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: skewX(-25deg);
         }
 
-        .work-item .overlay h3 {
-            margin: 0 0 5px 0;
-            font-size: 1.5rem;
+        .work-item:hover::before {
+            animation: shimmer 1.5s infinite;
         }
 
-        .work-item .overlay p {
-            margin: 0;
-            opacity: 0;
-            transform: translateY(10px);
-            transition: opacity 0.5s, transform 0.5s;
-        }
-
-        .work-item:hover .overlay p {
-            opacity: 0.8;
-            transform: translateY(0);
-        }
-
-        .work-item .shimmer-effect {
-            position: absolute;
-            top: 0;
-            left: -150%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
-            transition: left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .work-item:hover .shimmer-effect {
-            left: 150%;
-        }
-
-        /* About Section */
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
-            line-height: 1.8;
-            font-size: 1.2rem;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 40px 5%;
-            background-color: #121212;
-            border-top: 1px solid #222;
-            margin-top: 40px;
-        }
-
-        footer .logo {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            color: #ffd700;
-            letter-spacing: 1px;
-        }
-
-        /* Scroll animation */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-
-        .animate-on-scroll.is-visible {
-            opacity: 1;
-            transform: translateY(0);
+        @keyframes shimmer {
+            0% { left: -75%; }
+            100% { left: 125%; }
         }
     </style>
 </head>
-<body onload="document.body.classList.add('fade-in')">
+<body>
 
     <header>
-        <div class="logo">ENYXA DOT COM</div>
+        <img src="logo.png" alt="Enyxa Logo">
         <nav>
-            <a onclick="event.preventDefault(); showPage('home')">Home</a>
-            <a onclick="event.preventDefault(); showPage('work')">Work</a>
-            <a onclick="event.preventDefault(); showPage('about')">About</a>
+            <a href="#home">Home</a>
+            <a href="#work">Work</a>
         </nav>
     </header>
 
-    <main>
-        <div id="home" class="page">
-            <section class="hero page-section">
-                <img src="logo.png" alt="ENYXA Logo" class="crown-logo" />
-                
-                <h1>Strategic impact that elevates your brand and connects with your audience on a deeper level.</h1>
-                <p></p>
-                <div class="klaviyo-form-Ws6kk9"></div>
-            </section>
+    <section id="home">
+        <h1>Welcome to Enyxa</h1>
+        <p style="text-align:center; max-width:700px; margin:auto;">Your creative solutions partner for copywriting, sales funnels, and high-converting content.</p>
+    </section>
 
-            <section class="copywriting-description page-section animate-on-scroll">
-                <h2>The Art of Persuasion</h2>
-                <p>
-                    Copywriting is the architecture of belief, the science of desire, and the art of connection.
-                </p>
-            </section>
+    <section id="work">
+        <h2>Work</h2>
+        <div class="work-grid">
+            <div class="work-item">Sales Page (Long Form)</div>
+            <div class="work-item">VSL Script</div>
+            <div class="work-item">Webinar Deck</div>
+            <div class="work-item">Lead Generation Landing Page</div>
+            <div class="work-item">Opt-in Page</div>
+            <div class="work-item">Thank You / Confirmation Page</div>
+            <div class="work-item">Reel Script (&lt;90 Seconds Each)</div>
+            <div class="work-item">Story Sequence (3-5 Slides)</div>
+            <div class="work-item">Social Media Carousel (5-10 Slides)</div>
+            <div class="work-item">Single Email (Copy Only)</div>
+            <div class="work-item">Single Email (Copy + Design)</div>
+            <div class="work-item">Email Nurture Sequence (5-7 Emails, Copy Only)</div>
+            <div class="work-item">Email Nurture Sequence (5-7 Emails, Copy + Design)</div>
+            <div class="work-item">Email Sales Sequence (5-7 Emails)</div>
+            <div class="work-item">Upsell / Order Bump Page</div>
+            <div class="work-item">Info Sales Page</div>
+            <div class="work-item">Ad Copy (Set of 3-5) + Setup</div>
+            <div class="work-item">Membership Site Sales Copy</div>
+            <div class="work-item">Product Launch Email Campaign (Complete)</div>
+            <div class="work-item">Evergreen Funnel Copy (Complete)</div>
+            <div class="work-item">Quiz Funnel Copy</div>
+            <div class="work-item">Case Study / Success Story</div>
+            <div class="work-item">About Page or Bio (Authority-Building)</div>
+            <div class="work-item">Website Copy</div>
         </div>
+    </section>
 
-        <div id="work" class="page" style="display:none;">
-            <section class="page-section">
-                <h2>Our Work</h2>
-                <div class="work-categories">
-                    <button class="active" onclick="filterWork('all')">All</button>
-                    <button onclick="filterWork('info')">Info</button>
-                    <button onclick="filterWork('luxury')">Luxury Branding</button>
-                    <button onclick="filterWork('social')">Social Media</button>
-                </div>
-                <div class="work-matrix">
-                    <a href="YOUR_GOOGLE_DOC_LINK_HERE" target="_blank" class="work-item" data-category="info">
-                        <img src="https://placehold.co/600x400/000000/FFFFFF?text=VSL+Script" alt="VSL Script" />
-                        <div class="shimmer-effect"></div>
-                        <div class="overlay">
-                            <h3>VSL Script</h3>
-                            <p>Engaging video sales letter script.</p>
-                        </div>
-                    </a>
-                    <a href="YOUR_GOOGLE_DOC_LINK_HERE" target="_blank" class="work-item" data-category="info">
-                        <img src="https://placehold.co/600x400/000000/FFFFFF?text=Sales+Page" alt="Sales Page" />
-                        <div class="shimmer-effect"></div>
-                        <div class="overlay">
-                            <h3>Sales Page (Long Form)</h3>
-                            <p>High-converting long-form sales page.</p>
-                        </div>
-                    </a>
-                    <a href="YOUR_GOOGLE_DOC_LINK_HERE" target="_blank" class="work-item" data-category="info">
-                        <img src="https://placehold.co/600x400/000000/FFFFFF?text=Webinar+Deck" alt="Webinar Deck" />
-                        <div class="shimmer-effect"></div>
-                        <div class="overlay">
-                            <h3>Webinar Deck</h3>
-                            <p>Compelling content for your webinar.</p>
-                        </div>
-                    </a>
-                    <a href="YOUR_GOOGLE_DOC_LINK_HERE" target="_blank" class="work-item" data-category="luxury">
-                        <img src="https://placehold.co/600x400/000000/FFFFFF?text=Website+Copy" alt="Website Copy" />
-                        <div class="shimmer-effect"></div>
-                        <div class="overlay">
-                            <h3>Website Copy</h3>
-                            <p>Elegant and persuasive website copy.</p>
-                        </div>
-                    </a>
-                    <a href="YOUR_GOOGLE_DOC_LINK_HERE" target="_blank" class="work-item" data-category="luxury">
-                        <img src="https://placehold.co/600x400/000000/FFFFFF?text=About+Page" alt="About Page" />
-                        <div class="shimmer-effect"></div>
-                        <div class="overlay">
-                            <h3>About Page / Bio</h3>
-                            <p>Authority-building about page or bio.</p>
-                        </div>
-                    </a>
-                    <a href="YOUR_GOOGLE_DOC_LINK_HERE" target="_blank" class="work-item" data-category="luxury">
-                        <img src="https://placehold.co/600x400/000000/FFFFFF?text=Email+Sequence" alt="Email Sequence" />
-                        <div class="shimmer-effect"></div>
-                        <div class="overlay">
-                            <h3>Email Nurture Sequence</h3>
-                            <p>Engaging 5-7 email sequence (copy + design).</p>
-                        </div>
-                    </a>
-                    <a href="YOUR_GOOGLE_DOC_LINK_HERE" target="_blank" class="work-item" data-category="social">
-                        <img src="https://placehold.co/600x400/000000/FFFFFF?text=Reel+Script" alt="Reel Script" />
-                        <div class="shimmer-effect"></div>
-                        <div class="overlay">
-                            <h3>Reel Script</h3>
-                            <p>Viral-worthy reel script (&lt;90 seconds).</p>
-                        </div>
-                    </a>
-                    <a href="YOUR_GOOGLE_DOC_LINK_HERE" target="_blank" class="work-item" data-category="social">
-                        <img src="https://placehold.co/600x400/000000/FFFFFF?text=Carousel" alt="Carousel" />
-                        <div class="shimmer-effect"></div>
-                        <div class="overlay">
-                            <h3>Social Media Carousel</h3>
-                            <p>Engaging 5-10 slide carousel.</p>
-                        </div>
-                    </a>
-                    <a href="YOUR_GOOGLE_DOC_LINK_HERE" target="_blank" class="work-item" data-category="social">
-                        <img src="https://placehold.co/600x400/000000/FFFFFF?text=Ad+Copy" alt="Ad Copy" />
-                        <div class="shimmer-effect"></div>
-                        <div class="overlay">
-                            <h3>Ad Copy (Set of 3-5)</h3>
-                            <p>High-performance ad copy and setup.</p>
-                        </div>
-                    </a>
-                </div>
-            </section>
-        </div>
-
-        <div id="about" class="page" style="display:none;">
-            <section class="page-section">
-                <h2>About</h2>
-                <div class="about-content">
-                    <p>
-                        The perception of reality can be as real as reality itself.
-                        Let's create something extraordinary together.
-                    </p>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer>
-        <div class="logo">ENYXA DOT COM</div>
-        <p>Follow me on <a href="#" style="color: #ffd700;">Instagram</a> and <a href="#" style="color: #ffd700;">LinkedIn</a>.</p>
-    </footer>
-
-    <script>
-        // Show selected page and hide others
-        function showPage(pageId) {
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(page => {
-                page.style.display = page.id === pageId ? 'block' : 'none';
-            });
-            window.scrollTo(0, 0);
-        }
-
-        // Filter work by category
-        function filterWork(category) {
-            const items = document.querySelectorAll('.work-item');
-            const buttons = document.querySelectorAll('.work-categories button');
-
-            buttons.forEach(button => {
-                button.classList.remove('active');
-                if (button.innerText.toLowerCase().replace(' ', '') === category.toLowerCase()) {
-                    button.classList.add('active');
-                } else if (category === 'all' && button.innerText.toLowerCase() === 'all') {
-                    button.classList.add('active');
-                }
-            });
-
-            items.forEach(item => {
-                item.style.display = category === 'all' || item.dataset.category === category ? 'block' : 'none';
-            });
-        }
-
-        // Scroll animations using Intersection Observer
-        const scrollAnimator
+</body>
+</html>

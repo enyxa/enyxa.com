@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ENYXA - Copywriter</title>
-    <!-- Favicon: Updated to show ENYXA DOT COM with a black background. -->
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='black'/%3E%3Ctext x='50' y='55' font-size='18' font-family='sans-serif' fill='gold' text-anchor='middle' font-weight='bold'%3EENYXA%3C/text%3E%3Ctext x='50' y='75' font-size='14' font-family='sans-serif' fill='gold' text-anchor='middle'%3EDOT COM%3C/text%3E%3C/svg%3E">
     
-    <!-- PASTE YOUR GOOGLE ANALYTICS TAG HERE -->
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2X2H04KX2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2X2H04KX2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-Q2X2H04KX2');
-</script>
+      gtag('config', 'G-Q2X2H04KX2');
+    </script>
 
     <style>
         /* General Styling */
@@ -130,7 +127,7 @@
         .hero p {
             font-size: clamp(1rem, 2vw, 1.2rem);
             max-width: 700px;
-            margin: 0 auto;
+            margin: 20px auto 30px; /* Adjusted margin for spacing */
             color: #aaa;
         }
         
@@ -341,13 +338,9 @@
 </head>
 <body onload="document.body.classList.add('fade-in')">
 
-    <!-- Header: This header appears on all pages and stays at the top. -->
     <header>
-        <!-- Your Logo: Updated to ENYXA DOT COM. -->
         <div class="logo">ENYXA DOT COM</div>
         <nav>
-            <!-- Navigation Links: These links will navigate between the pages. -->
-            <!-- FIX: Added event.preventDefault() to stop the page from jumping. -->
             <a onclick="event.preventDefault(); showPage('home')">Home</a>
             <a onclick="event.preventDefault(); showPage('work')">Work</a>
             <a onclick="event.preventDefault(); showPage('about')">About</a>
@@ -355,55 +348,33 @@
     </header>
 
     <main>
-        <!-- Home Page Content -->
         <div id="home" class="page">
             <section class="hero page-section">
-                <!-- Gold Crown Logo -->
-                <svg class="crown-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="#ffd700" d="M452 128.2c-15.3-16.2-37.2-25.3-60-26.5C353.4 53.4 306.6 8 256 8S158.6 53.4 120 101.7c-22.8 1.2-44.7 10.3-60 26.5-17.5 18.5-28 41.4-28 66.8 0 27.4 12.8 52.6 34.5 69.8-10.3 3.3-20.3 7.8-29.6 13.2-19.4 11.2-34.5 28.5-43.3 49.8-8.8 21.3-11.2 44.5-7.1 67.2C29.2 454.4 62.2 496 103.3 504c4.3 .8 8.7 1.2 13.1 1.2h279.1c4.5 0 8.8-.4 13.1-1.2 41.1-8 74.1-49.6 82.3-100.8 4.1-22.7 1.7-45.9-7.1-67.2-8.8-21.3-23.9-38.6-43.3-49.8-9.3-5.4-19.3-9.9-29.6-13.2 21.7-17.2 34.5-42.4 34.5-69.8.1-25.4-10.4-48.3-27.9-66.8zM128 136c0-30.9 25.1-56 56-56s56 25.1 56 56-25.1 56-56 56-56-25.1-56-56zm200 56c-30.9 0-56-25.1-56-56s25.1-56 56-56 56 25.1 56 56-25.1 56-56 56z"/>
-                </svg>
-                <!-- Main Headline: Replace with your compelling headline. -->
+                <img src="logo.png" alt="ENYXA Logo" class="crown-logo">
+                
                 <h1>Copywriting for Visionaries</h1>
-                <!-- Subheadline: Add a brief description of your services. -->
-                <p>Strategic impact and compelling narratives that elevate your brand and connect with your audience on a deeper level.</p>
-                <!-- Irresistible Call to Action Button -->
-                <a href="YOUR_TYPEFORM_LINK_HERE" target="_blank" class="cta-button">Begin Your Transformation</a>
+                <p>Strategic impact that elevates your brand and connects with your audience on a deeper level. </p>
+                
+                <div class="klaviyo-form-Ws6kk9"></div>
             </section>
             
-            <!-- Copywriting Description Section -->
             <section class="copywriting-description page-section animate-on-scroll">
-                 <h2>The Art of Persuasion</h2>
-                 <p>Copywriting is the architecture of belief, the science of desire, and the art of connection. The right words have the ability to create a magnetic pull towards your brand that is undeniable. </p>
+                  <h2>The Art of Persuasion</h2>
+                  <p>Copywriting is the architecture of belief, the science of desire, and the art of connection. Combine artistry with strategy and create narratives that are impactful and unforg </p>
             </section>
             
-            <section class="testimonials page-section animate-on-scroll">
-                <h2>What Our Clients Say</h2>
-                <!-- Testimonial 1: Replace with a client testimonial. -->
-                <div class="testimonial">
-                    <p>"Working with Enyxa was a game-changer for our brand. The copy was not only beautiful but also incredibly effective."</p>
-                    <p><strong>- Rocío Carnero, Coach de Mujeres</strong></p>
-                </div>
-                <!-- Testimonial 2: Add more testimonials as needed. -->
-                <div class="testimonial">
-                    <p>"The best in the business. The attention to detail and understanding of our vision was unmatched."</p>
-                    <p><strong>- Fiorella Medina, Founder of The Fio Method</strong></p>
-                </div>
-            </section>
-        </div>
+            </div>
 
-        <!-- Work Page Content -->
         <div id="work" class="page" style="display:none;">
             <section class="page-section">
                 <h2>Our Work</h2>
                 <div class="work-categories">
-                    <!-- Category Filters: These buttons will filter the work samples. -->
                     <button class="active" onclick="filterWork('all')">All</button>
                     <button onclick="filterWork('info')">Info</button>
                     <button onclick="filterWork('luxury')">Luxury Branding</button>
                     <button onclick="filterWork('social')">Social Media</button>
                 </div>
                 <div class="work-matrix">
-                    <!-- Work Item 1: VSL Script -->
                     <a href="YOUR_GOOGLE_DOC_LINK_HERE" target="_blank" class="work-item" data-category="info">
                         <img src="https://placehold.co/600x400/000000/FFFFFF?text=VSL+Script" alt="VSL Script">
                         <div class="shimmer-effect"></div>
@@ -412,7 +383,6 @@
                             <p>Engaging video sales letter script.</p>
                         </div>
                     </a>
-                    <!-- Work Item 2: Sales Page -->
                     <a href="YOUR_GOOGLE_DOC_LINK_HERE" target="_blank" class="work-item" data-category="info">
                         <img src="https://placehold.co/600x400/000000/FFFFFF?text=Sales+Page" alt="Sales Page">
                         <div class="shimmer-effect"></div>
@@ -421,7 +391,6 @@
                             <p>High-converting long-form sales page.</p>
                         </div>
                     </a>
-                    <!-- Work Item 3: Webinar Deck -->
                     <a href="YOUR_GOOGLE_DOC_LINK_HERE" target="_blank" class="work-item" data-category="info">
                         <img src="https://placehold.co/600x400/000000/FFFFFF?text=Webinar+Deck" alt="Webinar Deck">
                         <div class="shimmer-effect"></div>
@@ -430,7 +399,6 @@
                             <p>Compelling content for your webinar.</p>
                         </div>
                     </a>
-                    <!-- Work Item 4: Website Copy -->
                     <a href="YOUR_GOOGLE_DOC_LINK_HERE" target="_blank" class="work-item" data-category="luxury">
                         <img src="https://placehold.co/600x400/000000/FFFFFF?text=Website+Copy" alt="Website Copy">
                         <div class="shimmer-effect"></div>
@@ -439,7 +407,6 @@
                             <p>Elegant and persuasive website copy.</p>
                         </div>
                     </a>
-                    <!-- Work Item 5: About Page/Bio -->
                     <a href="YOUR_GOOGLE_DOC_LINK_HERE" target="_blank" class="work-item" data-category="luxury">
                         <img src="https://placehold.co/600x400/000000/FFFFFF?text=About+Page" alt="About Page">
                         <div class="shimmer-effect"></div>
@@ -448,7 +415,6 @@
                             <p>Authority-building about page or bio.</p>
                         </div>
                     </a>
-                    <!-- Work Item 6: Email Nurture Sequence -->
                     <a href="YOUR_GOOGLE_DOC_LINK_HERE" target="_blank" class="work-item" data-category="luxury">
                         <img src="https://placehold.co/600x400/000000/FFFFFF?text=Email+Sequence" alt="Email Sequence">
                         <div class="shimmer-effect"></div>
@@ -457,7 +423,6 @@
                             <p>Engaging 5-7 email sequence (copy + design).</p>
                         </div>
                     </a>
-                    <!-- Work Item 7: Reel Script -->
                     <a href="YOUR_GOOGLE_DOC_LINK_HERE" target="_blank" class="work-item" data-category="social">
                         <img src="https://placehold.co/600x400/000000/FFFFFF?text=Reel+Script" alt="Reel Script">
                         <div class="shimmer-effect"></div>
@@ -466,7 +431,6 @@
                             <p>Viral-worthy reel script (&lt;90 seconds).</p>
                         </div>
                     </a>
-                    <!-- Work Item 8: Social Media Carousel -->
                     <a href="YOUR_GOOGLE_DOC_LINK_HERE" target="_blank" class="work-item" data-category="social">
                         <img src="https://placehold.co/600x400/000000/FFFFFF?text=Carousel" alt="Carousel">
                         <div class="shimmer-effect"></div>
@@ -475,7 +439,6 @@
                             <p>Engaging 5-10 slide carousel.</p>
                         </div>
                     </a>
-                    <!-- Work Item 9: Ad Copy -->
                     <a href="YOUR_GOOGLE_DOC_LINK_HERE" target="_blank" class="work-item" data-category="social">
                         <img src="https://placehold.co/600x400/000000/FFFFFF?text=Ad+Copy" alt="Ad Copy">
                         <div class="shimmer-effect"></div>
@@ -488,24 +451,19 @@
             </section>
         </div>
 
-        <!-- About Page Content -->
         <div id="about" class="page" style="display:none;">
             <section class="page-section">
                 <h2>About Me</h2>
                 <div class="about-content">
-                    <!-- Your Bio: Write a compelling bio here. -->
-                    <p>I believe in the power of words to shape perceptions and build empires. My passion for futurism and luxury aesthetics drives my approach to copywriting. Combine artistry with strategy and create narratives that are impactful and unforgettable.</p>
+                    <p>I believe in the power of words to shape perceptions and build empires. My passion for futurism and luxury aesthetics drives my approach to copywriting.</p>
                     <p>Let's create something extraordinary together.</p>
                 </div>
             </section>
         </div>
     </main>
 
-    <!-- Footer: This footer appears on all pages. -->
     <footer>
-        <!-- Your Logo: Updated to ENYXA DOT COM -->
         <div class="logo">ENYXA DOT COM</div>
-        <!-- Social Media Links: Add your social media profiles here. -->
         <p>Follow me on <a href="#" style="color: #ffd700;">LinkedIn</a>, <a href="#" style="color: #ffd700;">Twitter</a>, and <a href="#" style="color: #ffd700;">Instagram</a>.</p>
     </footer>
 
